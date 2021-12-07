@@ -4,9 +4,10 @@ const mensajeSorteo = () => {
     console.log(`Se están realizando los sorteos...`);
 };
 
-const funcionPrincipal = (numSorteos, numeroElegido, numeroRandom, mensajeSorteo) => {
+const funcionPrincipal = async (numSorteos, numeroElegido, numeroRandom, mensajeSorteo) => {
     let posibilidades = 1 / numeroRandom;
     let porcentaje = posibilidades * 100;
+    console.log("Comienza el sorteo...");
     console.log(`Tienes ${posibilidades} posibilidades de que salga premiado el número: ${numeroElegido}.`);
     console.log(`Y el porcentaje de que salga premiado es del ${porcentaje}%`);
     for (let i = 0; i < numSorteos; i++) {
@@ -18,8 +19,6 @@ const funcionPrincipal = (numSorteos, numeroElegido, numeroRandom, mensajeSorteo
     }; 
     console.log("Los sorteos han finalizado.");
 };
-
-console.log("Inicie los sorteos...");
 
 let numSorteos = 30000;
 let numeroElegido = 1315;
